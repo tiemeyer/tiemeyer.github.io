@@ -1,13 +1,17 @@
+---
+title: the Weight
+---
 <!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <title>temporary front page</title>
-    <link rel='stylesheet' type='text/css' href='/css/basic.css' />
-  </head>
-  <body>
-  <h1>Gavin is the motherluvin' best</h1>
-  <p>Gavin,</p>
-  <p>This is your site.  I haven't actually done anything to it, so this is basic AF, but I'm going to start working on it.</p>
-  <p>When I get something actually worth putting on here, I will update the repository and let you know, but until then this will have to suffice.</p>
-  </body>
-</html>
+  <html lang="en">
+    <head>
+      <title>the Weight</title>
+      <link rel="stylesheet" type="text/css" href="{{ '/css/gavin.css' | relative_url }}" />
+    </head>
+    <body class="container">
+      {% include header.html %}
+      {% include nav.html %}
+      <main>
+	{% include front.html %}
+      </main>
+    </body>
+  </html>

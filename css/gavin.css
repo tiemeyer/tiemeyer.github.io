@@ -1,0 +1,313 @@
+/* ===============================================================
+       Author: 	 Gavin Tiemeyer
+       Designer: Lucas Smith
+       License:  TBD
+   =============================================================== */
+
+/* _______________________________________________________________
+   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   _______________________________________________________________
+
+       Table of Contents:
+
+       0. Preamble
+       1. Typography
+       2. Colors
+       3. Layout
+       4. Button
+       5. Effects
+       6. Response
+
+   _______________________________________________________________
+   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   _______________________________________________________________ */
+
+
+/*
+   0. Preamble
+   ...............................................................
+
+   This is my first site. I've rewritten it a few times for vari-
+   ous reasons: made it mobile first, rearranged the landing site,
+   moved toward class-based styles. Please be kind to my mistakes 
+   and know that they reflect only anticipated short-comings of a
+   first effort. Cutting teeth is never a clean task.
+
+   The preamble includes generic page-wide styles:
+
+   ............................................................... */
+
+html {
+    box-sizing: border-box;
+    margin:     0;
+    padding:    0;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin:     0;
+    padding:    0;
+}
+
+
+/* 
+   1. Typography
+   ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */
+
+/* 
+      typefaces 
+*/
+@font-face {
+              font-family:  title-main;
+                      src:  url("cormorant_fonts/Cormorant-Light.otf");
+           }
+@font-face {
+              font-family:  title-alt;
+                      src:  url("cormorant_fonts/CormorantUpright-Light.otf");
+           }
+@font-face {
+              font-family:  title-article;
+	              src:  url("cormorant_fonts/CormorantUpright-Medium.otf");
+           }
+@font-face {
+              font-family:  body;
+                      src:  url("cormorant_fonts/CormorantGaramond-Medium.otf");
+    font-feature-settings: "onum", /* oldstyle (text or lower case) numbers */ 
+                           "zero", /* slashed (in this case dotted) zero */
+			   "liga", /* standard ligatures */
+			   "calt", /* contextual alternatives */
+			   "kern"; /* kerning */
+           }
+@font-face {
+              font-family:  body-bold;
+                      src:  url("cormorant_fonts/CormorantGaramond-Bold.otf");
+           }
+@font-face {
+              font-family:  body-italic;
+                      src:  url("cormorant_fonts/CormorantGaramond-Italic.otf");
+           }
+main             { font-family: "body";          }
+h1, h2           { font-family: "title-main";    }
+h1 span, h2 span { font-family: "title-alt";     }
+h3               { font-family: "title-article"; }
+a                { font-family: "body";
+                   font-feature-settings: "calt", /* contextual alternatives */
+					  "kern", /* kerning */
+					  "c2sc", /* caps as small caps */   
+					  "smcp"; /* small caps */   
+		 }
+/* 
+      sizes 
+*/
+html        { font-size: 62.5%; }                          /* base size:    10px */
+body        { font-size: 160%;  line-height: 2;          }  /* body size:    16px; line height: 32px */
+h1          { font-size: 250%;  line-height: 1.20;       }  /* title size:   40px; line height: 48px */
+h1 span,
+h2 span     { font-size: 100%;  line-height: 1.20;       }  /* alt size:     40px; line height: 48px */
+/* h2       { font-size:     ;  line-height:     ;       }  /* subhead size:   px; line height:   px */
+h3          { font-size: 150%;  line-height: 1.33333333; }  /* article size: 24px; line height: 32px */
+nav ul li a { font-size: 1.5em; line-height: 1.20;       }  /* anchor size:  24px; line height: 32px */ 
+
+/* misc rules */ 
+p             { max-width:        28em; } /* measure of paragraph line */
+a             { text-decoration:  none; }
+li            { list-style:       none; }
+i, em         { font-family:     "body-italic"; font-style:  normal; }
+b, strong     { font-family:     "body-bold";   font-weight: normal; }
+p::first-line { font-feature-settings: "calt", /* contextual alternatives */
+		      		       "kern", /* kerning */
+				       "c2sc", /* caps as small caps */   
+				       "smcp"; /* small caps */
+	      }
+
+
+h1 {
+     word-spacing:   -.05em; 
+     letter-spacing: -.04em; 
+     font-weight:     normal;
+}
+h2 { font-weight:     normal; }
+h3 {
+     font-weight:     normal;
+     max-width:       18.66667em; /* measure of title line */
+}
+p               { text-indent: 1em; }
+p:first-of-type { text-indent: 0;   }
+
+
+
+/*
+   2. Colors
+   ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */
+
+                      body { background-color: #fdf8ff; }
+h1 span, h2 span, nav ul a { color:            #800;    }
+            nav ul a:hover { color:            #088;    }
+	            button { color:            #fdf8ff; }
+
+
+/*
+   3. Layout
+   ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */
+
+/* skeleton.css steal */
+.container {
+  position:   relative;
+  width:      100%;
+  max-width:  800px;
+  margin:     0 auto;
+  padding:    0 20px;
+  box-sizing: border-box;
+}
+
+h1     { padding: 2.4em 0 1.2em 0;   }
+h3     { margin-bottom: 1.33333em;   }
+p      { margin: 0; padding: 0;      }
+.gen_nav {
+    width: 100%;
+    max-width: 34em;
+    padding-bottom: 1.25em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.gen_nav li {
+    width: 50%;
+    flex: 1 0 auto;
+}
+
+
+/*
+   4. Button
+   ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */
+
+.icon {
+    font-size:  1em;
+    height:     2em;
+    width:      2em;
+    box-sizing: content-box;
+    padding:    0; margin: 0;
+}
+.nav_drop {
+    display: none;
+}
+label {
+    position: absolute;
+    right: 1em; top: 1em;
+    background-color: #fdf8ff;
+}
+.nav {
+    padding: 0; margin: 0;
+    max-height: 0;
+    transition: max-height 2s linear; 
+}
+.nav_drop:checked + .nav {
+    max-height: 30em;
+} 
+.gen_nav {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+.nav_drop:checked ~ .nav .gen_nav {
+    opacity: 1; 
+}
+.gen_nav li {
+    visibility: hidden;
+    transition: visibility 2s ease;
+}
+.nav_drop:checked ~ .nav .gen_nav li {
+    visibility: visible;
+}
+
+
+/*
+   5. Effects
+   ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */
+
+/* anchor fade */
+nav ul a { transition-property: color; transition-duration: 1s; } 
+
+/* vhs-top steal */
+.vhs-top {
+  opacity: 0;
+  animation-duration:  1.75s;
+  animation-fill-mode: forwards;
+  animation-name: vhs-top;
+  transform:      translateY(-25vh);
+}
+@keyframes vhs-top {
+   0% { transform: translateY(-25vh); opacity: 0; }
+  50% { transform: translateY(-25vh); opacity: 0; }
+ 100% { transform: translateY(0);     opacity: 1; }
+}
+
+.container {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: container;
+}
+@keyframes container {
+    0% { opacity: 0; }
+   25% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+/*
+   6. Response
+   ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */
+
+/* 
+   -----> typographical response <----- */
+
+/* measure change for larger viewport . . . */
+@media ( min-width: 500px ) {
+    p  { max-width: 34em;       }
+    h3 { max-width: 22.66667em; }
+}
+/* . . . as do font sizes */
+@media ( min-width: 600px ) {
+    body {
+        font-size: 200%;      
+    }
+}
+@media ( min-width: 1600px ) {
+    body {
+        font-size: 300%;
+    }
+}
+/* 
+   -----> layout & effects response <----- */
+
+@media ( min-width: 600px ) {
+    .container {
+/*        width:   85%; 
+        padding: 2em; */
+        margin: 0 auto;
+    }
+    label {
+	display: none;
+    }
+    .nav {
+	max-height: 10em;
+	transition: none;
+	float: right;
+	margin-left: 3em;
+	padding-right: 1em; 
+    }
+    .gen_nav {
+	opacity: 1;
+	transition: none;
+	flex-direction: column;
+    }
+    .gen_nav li {
+	visibility: visible;
+	transition: none;
+	width: 100%;
+    }
+}
+@media ( min-width: 800px ) {
+    .nav {
+	padding-right: 2em;
+    }
+}
