@@ -242,7 +242,7 @@ nav ul a { transition-property: color; transition-duration: 1s; }
 
 .container {
     opacity: 0;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-name: container;
 }
