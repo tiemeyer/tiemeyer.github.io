@@ -58,19 +58,19 @@ html {
 */
 @font-face {
               font-family:  title-main;
-                      src:  url("cormorant_fonts/Cormorant-Light.otf");
+                      src:  url("../cormorant_fonts/Cormorant-Light.otf");
            }
 @font-face {
               font-family:  title-alt;
-                      src:  url("cormorant_fonts/CormorantUpright-Light.otf");
+                      src:  url("../cormorant_fonts/CormorantUpright-Light.otf");
            }
 @font-face {
               font-family:  title-article;
-	              src:  url("cormorant_fonts/CormorantUpright-Medium.otf");
+	              src:  url("../cormorant_fonts/CormorantUpright-Medium.otf");
            }
 @font-face {
               font-family:  body;
-                      src:  url("cormorant_fonts/CormorantGaramond-Medium.otf");
+                      src:  url("../cormorant_fonts/CormorantGaramond-Medium.otf");
     font-feature-settings: "onum", /* oldstyle (text or lower case) numbers */ 
                            "zero", /* slashed (in this case dotted) zero */
 			   "liga", /* standard ligatures */
@@ -79,11 +79,11 @@ html {
            }
 @font-face {
               font-family:  body-bold;
-                      src:  url("cormorant_fonts/CormorantGaramond-Bold.otf");
+                      src:  url("../cormorant_fonts/CormorantGaramond-Bold.otf");
            }
 @font-face {
               font-family:  body-italic;
-                      src:  url("cormorant_fonts/CormorantGaramond-Italic.otf");
+                      src:  url("../cormorant_fonts/CormorantGaramond-Italic.otf");
            }
 main             { font-family: "body";          }
 h1, h2           { font-family: "title-main";    }
