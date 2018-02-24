@@ -85,7 +85,8 @@ html {
               font-family:  body-italic;
                       src:  url("../cormorant_fonts/CormorantGaramond-Italic.otf");
            }
-main             { font-family: "body";          }
+
+html, main       { font-family: "body";          }
 h1, h2           { font-family: "title-main";    }
 h1 span, h2 span { font-family: "title-alt";     }
 h3               { font-family: "title-article"; }
