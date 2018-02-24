@@ -230,7 +230,7 @@ nav ul a { transition-property: color; transition-duration: 1s; }
 /* vhs-top steal */
 .vhs-top {
   opacity: 0;
-  animation-duration:  1.75s;
+  animation-duration:  2.75s;
   animation-fill-mode: forwards;
   animation-name: vhs-top;
   transform:      translateY(-25vh);
@@ -243,7 +243,7 @@ nav ul a { transition-property: color; transition-duration: 1s; }
 
 .container {
     opacity: 0;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-name: container;
 }
