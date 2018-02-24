@@ -237,7 +237,7 @@ nav ul a { transition-property: color; transition-duration: 1s; }
 }
 @keyframes vhs-top {
    0% { transform: translateY(-25vh); opacity: 0; }
-  50% { transform: translateY(-25vh); opacity: 0; }
+  75% { transform: translateY(-25vh); opacity: 0; }
  100% { transform: translateY(0);     opacity: 1; }
 }
 
