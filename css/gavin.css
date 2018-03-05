@@ -140,10 +140,10 @@ p:first-of-type { text-indent: 0;   }
    2. Colors
    ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */
 
-                      body { background-color: #fdf8ff; }
-h1 span, h2 span, nav ul a { color:            #800;    }
-            nav ul a:hover { color:            #088;    }
-	            button { color:            #fdf8ff; }
+               body { background-color: #fdf8ff; }
+h1 span, h2 span, a { color:            #800;    }
+            a:hover { color:            #088;    }
+	     button { color:            #fdf8ff; }
 
 
 /*
@@ -156,7 +156,7 @@ h1 span, h2 span, nav ul a { color:            #800;    }
   width:      100%;
   max-width:  800px;
   margin:     0 auto;
-  padding:    0 20px;
+  padding:    0 20px 3em 20px;
   box-sizing: border-box;
 }
 
