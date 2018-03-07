@@ -175,6 +175,30 @@ p      { margin: 0; padding: 0;      }
     width: 50%;
     flex: 1 0 auto;
 }
+img {
+    width: 100%;
+    max-width:300px;
+    clear: none;
+    border-radius: 5px;
+}
+p {
+    clear: none;
+}
+img:nth-of-type(even) {
+    clear: none;
+    float: right;
+    margin-left: 1em;
+}
+img:nth-of-type(odd) {
+    clear: none;
+    float: left;
+    margin-right: 1em;
+}
+blockquote {
+    margin: 2em;
+    padding: 0;
+    font-family: body-italic;
+}
 
 
 /*
