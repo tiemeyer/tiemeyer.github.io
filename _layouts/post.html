@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<article>
+  <h3> {{ title }}</h3>
+  <div class="date">
+    {{ post.date | date: '%B %d, %Y' }}
+  </div>
+  {{ content }}
+</article>
+
