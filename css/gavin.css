@@ -149,7 +149,7 @@ h1 span, h2 span, a { color:            #800;    }
 .post:after {
     background-image: linear-gradient(to bottom,
 				      rgba(253,248,255,0),
-				      rgba(253,248,255,1) 85%);
+				      rgba(253,248,255,1) 90%);
 }
 
 
